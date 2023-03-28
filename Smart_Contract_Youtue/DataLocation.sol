@@ -13,6 +13,7 @@ contract DataLocations {
     mapping(address => MyStruct) public myStructs;
 
     function example1(
+        // 84043 gas
         uint[] memory y,
         string memory s
     ) external returns (uint[] memory) {
@@ -35,6 +36,7 @@ contract DataLocations {
     }
 
     function example2(
+        // 42968
         uint[] calldata y,
         string calldata s
     ) external returns (uint[] memory) {

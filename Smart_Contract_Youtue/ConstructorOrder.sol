@@ -23,11 +23,24 @@ contract B is Base {
     }
 }
 
+// A -> B -> C
+
 contract C is A("n"), B("t") {
     string work;
 
     constructor(string memory _work) {
         work = _work;
         emit Log("C constructor");
+    }
+}
+
+// B -> A -> D
+
+contract D is B("t"), A("n") {
+    string work;
+
+    constructor(string memory _work) {
+        work = _work;
+        emit Log("D constructor");
     }
 }
