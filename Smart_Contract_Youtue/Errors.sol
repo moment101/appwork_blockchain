@@ -4,6 +4,7 @@ pragma solidity ^0.8.7;
 // require, revert, assert
 // gas refund
 // custom error - save gas
+// revert 在複雜的條件判斷下，比較
 
 contract Error {
     function testRequre(uint _i) public pure {
